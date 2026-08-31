@@ -10,15 +10,15 @@ Androidのバッテリー情報をShizuku経由で取得し、**設計容量・�
 
 ビルド済みのAPKを利用したい場合は、GitHubリポジトリの **Releases（リリース）** からダウンロードできます。
 
-### 👉 [Releases / Resources]
+### 👉 [[Releases / Resources]](https://github.com/hiroki147/ShizukuBatteryChecker/releases/latest)
 
 GitHubのリリースページにある **Assets** からAPKをダウンロードしてください。
 
 ```text
-Releases
+リリース
  └── 最新バージョン
       └── Assets
-           └── ShizukuBatteryChecker.apk
+           └── app-debug.apk 
 ```
 
 ダウンロードしたAPKをAndroid端末に転送してインストールできます。
