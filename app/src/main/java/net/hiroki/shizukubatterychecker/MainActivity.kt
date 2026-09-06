@@ -107,11 +107,15 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
      */
     fun applyManualCapacity() {
         val value = manualDesignInput.toIntOrNull()
-        prefs.edit {
+        // 明示的に同期保存(commit=true) にして、確実に永続化する
+        prefs.edit(commit = true) {
             if (value != null && value > 0) {
                 putInt("saved_design_capacity", value)
+                // manualDesignInput は既に入力済みのはずだが、念のため正規化しておく
+                manualDesignInput = value.toString()
             } else {
                 remove("saved_design_capacity")
+                manualDesignInput = ""
             }
         }
         loadBatteryData()
